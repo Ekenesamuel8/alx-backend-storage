@@ -3,7 +3,7 @@
 -- to get the longevity: split minus formed
 -- from metal_bands table
 -- select only glam rock from style culume
-SELECT band_name, (IFNULLL(split, 2022) - formed) AS lifespan
+SELECT band_name, (IFNULL(split, 2022) - formed) AS lifespan
 FROM metal_bands
 WHERE style LIKE '%Glam rock%'
 ORDER BY lifespan DESC;
